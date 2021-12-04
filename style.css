@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --background-color: #121212;
+    --upkey-background: #b5b5b5;
+    --sidekey-background: #fc9c13;
+    --normalkey-background: #414141;
+    --primary-font-color: #fbfbfb;
+    --secondary-font-color: #202020;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+.display {
+    color: var(--primary-font-color);
+    font-size: 76px;
+    font-weight: 100;
+    text-align: right;
+    margin-right: 12px;
+    margin-bottom: 8px;
+}
+
+.key {
+    width: 90px;
+    color: var(--primary-font-color);
+    height: 90px;
+    background: var(--normalkey-background);
+    text-align: center;
+    line-height: 90px;
+    font-size: 35px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.key:hover {
+    background-color: hsl(0, 0%, 20%);
+}
+
+.key:active {
+    background-color: hsl(0, 0%, 15%);
+}
+
+.calculate {
+    margin: auto;
+    width: 400px;
+}
+
+.zero {
+    width: 190px;
+    border-radius: 49px;
+}
+
+tr:first-child .key {
+    background-color: var(--upkey-background);
+    color: var(--secondary-font-color);
+}
+
+tr:first-child .key:hover {
+    background-color: hsl(0, 0%, 61%);
+}
+
+tr:first-child .key:active {
+    background-color: hsl(0, 0%, 51%);
+}
+
+td:last-child .key {
+    background-color: var(--sidekey-background);
+    color: var(--primary-font-color);
+}
+
+td:last-child .key:hover {
+    background-color: hsl(35, 97%, 43%);
+}
+
+td:last-child .key:active {
+    background-color: hsl(35, 97%, 33%);
+}
