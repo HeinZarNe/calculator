@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-:root {
+ :root {
     --background-color: #121212;
     --upkey-background: #b5b5b5;
     --sidekey-background: #fc9c13;
     --normalkey-background: #414141;
     --primary-font-color: #fbfbfb;
     --secondary-font-color: #202020;
+}
+
+html {
+    font-size: 1px;
 }
 
 body {
@@ -16,13 +20,40 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 46px;
+    background: #9dd4ca;
+}
+
+header p {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+button {
+    width: 67px;
+    height: 17px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: var(--normalkey-background);
+}
+
 .display {
     color: var(--primary-font-color);
-    font-size: 76px;
+    font-size: 76rem;
     font-weight: 100;
+    height: 122px;
+    word-break: break-word;
     text-align: right;
     margin-right: 12px;
     margin-bottom: 8px;
+}
+
+hr {
+    margin-top: 16px;
 }
 
 .key {
@@ -81,4 +112,57 @@ td:last-child .key:hover {
 
 td:last-child .key:active {
     background-color: hsl(35, 97%, 33%);
+}
+
+@media screen and (max-width:435px) {
+    html {
+        font-size: 0.478px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 13px;
+        background: #9dd4ca;
+    }
+    header p {
+        font-size: 21px;
+        font-weight: 500;
+    }
+    .key {
+        width: 50px;
+        color: var(--primary-font-color);
+        height: 50px;
+        background: var(--normalkey-background);
+        text-align: center;
+        line-height: 50px;
+        font-size: 16px;
+        border-radius: 50%;
+        margin: 5px;
+        cursor: pointer;
+        user-select: none;
+    }
+    .zero {
+        width: 113px;
+        border-radius: 49px;
+    }
+    table {
+        width: 258px;
+        margin: auto;
+    }
+    .calculate {
+        margin: 0;
+        width: 100%;
+    }
+    .display {
+        color: var(--primary-font-color);
+        font-size: 76rem;
+        font-weight: 100;
+        height: 46px;
+        word-break: break-word;
+        text-align: right;
+        margin-left: 15px;
+        background: rgb(50, 58, 64);
+        font-size: 42rem;
+    }
 }
